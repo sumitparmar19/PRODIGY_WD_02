@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stopwatch">
+        <h1>Stopwatch</h1>
+        <div class="analog-clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="display">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            <span id="milliseconds">000</span>
+        </div>
+        <div class="timer-controls">
+            <input type="number" class="timer-input" id="hoursInput" placeholder="HH" min="0" max="23">
+            <input type="number" class="timer-input" id="minutesInput" placeholder="MM" min="0" max="59">
+            <input type="number" class="timer-input" id="secondsInput" placeholder="SS" min="0" max="59">
+            <button id="setTimerBtn" onclick="setTimer()">Set Timer</button>
+        </div>
+        <div class="controls">
+            <button id="startBtn" onclick="startStopwatch()">Start</button>
+            <button id="pauseBtn" onclick="pauseStopwatch()">Pause</button>
+            <button id="resetBtn" onclick="resetStopwatch()">Reset</button>
+            <button id="lapBtn" onclick="recordLap()">Lap</button>
+        </div>
+        <ul id="lapList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
